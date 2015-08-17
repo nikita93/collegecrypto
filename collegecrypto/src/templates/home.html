@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+{% block content %}
+    <!-- Intro Section -->
+    <section id="intro" class="full-screen-intro bg-img29">
+        <div class="media-wapper bg-img parallax parallax-section1 overlay-dark" style="background-image: ('static/img/header.png');">
+            <canvas id="pollyfill-canvas"></canvas>
+        </div>
+        <div class="full-cap-wraper">
+            <div class="content-caption light-color">
+                <div class="container">
+                    <div class="row">
+                    <h5>Crypto Currency Network presents:</h5>
+                    <br>
+                    <h1 class="h1">College Crypto Hacks</h1>
+                    <br>
+                    <div>
+                        <div class="form-field-wrapper col-md-4 col-md-offset-4">
+                        <h1>{{ title }}</h1>
+                        <form method="POST" action="">{% csrf_token %}
+                            {{ form|crispy }}
+                            <input type="submit" class="btn btn-md btn-white-line" value="Sign up!">
+                        </form>
+                        
+                        </div>
+                        <!-- <h1>{{ title }}</h1>
+
+                        <form method="POST" action="">{% csrf_token %}
+                        {{ form|crispy }}
+                        <input class="btn btn-primary" type="submit" value= "signup"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Intro Section -->
+
+    <!--About Section-->
+    <section id="about" class="wow fadeIn ptb ptb-sm-80">
+        <div class="container">
+            <img src="static/img/header.png">
+            
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>Who are we?</h3>
+                    <div class="spacer-15"></div>
+                    <p class="lead">CollegeCryptoHacks is the first blockchain focused student hackathon in Canada.<a class="tipped" data-title="Sample Text" data-tipper-options='{"direction":"top"}'><b>Vivamus elementum</b></a> If you haven't heard of the potential behind these technologies to disrupt every other industry that exists today, while bringing new ones into existence, you've probably been living under a rock. 
+                    The goal of this event is to provide an environment where creative and technically inclined students get an opportunity to experiment with these brand new tools, offering a glimpse into the future. We only hope it doesn't contribute to the development of Skynet..</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section-->
+
+    <!-- Action Box Section -->
+    <section id="action-box" class="dark-bg ptb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8">
+                    <h4 class="">Donec sodales sagittis magna bibendum sodales Sed consequat?</h4>
+
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <a class="btn btn-md btn-white float-right float-none-xs">Download</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Action Box Section -->
+
+    <!-- Statement Section -->
+    <section id="statement" class="bg-img19 overlay-dark80 dark-bg ptb ptb-sm-80">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <a class="cbox-iframe" href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&amp;wmode=transparent">
+                        <div class="page-icon-top"><i class="ion ion-ios-film-outline"></i></div>
+                    </a>
+                    <h4>Pellentesque eu pretium quis adipiscing sem neque sem Nulla consequat massa quis enim?</h4>
+                    <div class="spacer-15"></div>
+                    <a class="cbox-iframe btn btn-md btn-white" href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&amp;wmode=transparent">Watch Video</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Statement Section -->
+
+    <!-- Contact Section -->
+    
+
+        <hr />
+
+    <section id="contact-info" class="ptb ptb-sm-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-box-left">
+                        <div class="contact-icon-left"><i class="ion ion-ios-location"></i></div>
+                        <h6>Address</h6>
+                        <p>
+                            502, DieSachbearbeiter, Schönhauser Allee, 167c10435 Berlin,Germany.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-box-left">
+                        <div class="contact-icon-left"><i class="ion ion-ios-telephone"></i></div>
+                        <h6>Call Us</h6>
+                        <p>
+                            <span>+40 (0) 012 345 6789</span><br />
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-box-left">
+                        <div class="contact-icon-left"><i class="ion ion-ios-email"></i></div>
+                        <h6>Email</h6>
+                        <p>
+                            <a href="mailto:yourname@domain.com">yourname@domain.com</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- END FOOTER -->
+
+
+    <!-- Site Wraper End -->
+<!-- <div class="col-md-3">
+	
+		<h1>dude</h1>
+
+		<form method="POST" action="">{% csrf_token %}
+		{{ form|crispy }}
+		<input class="btn btn-primary" type="submit" value= "signup">
+
+		</form>
+	</div>
+</div> -->
+{% endblock %}
+
